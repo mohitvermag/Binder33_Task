@@ -1,17 +1,8 @@
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
-import Onboarding from './pages/Onboarding';
-import Auth from './pages/Auth';
-import Layout from './components/Layout';
-import Dashboard from './pages/Dashboard';
-import Tasks from './pages/Tasks';
-import CodeCreation from './pages/CodeCreation';
-import IpoManagement from './pages/IpoManagement';
-import Purchase from './pages/Purchase';
-import Ims from './pages/Ims';
+import { HashRouter, Routes, Route, Navigate } from 'react-router-dom';
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="/" element={<Onboarding />} />
         <Route path="/auth" element={<Auth />} />
@@ -25,6 +16,6 @@ export default function App() {
         </Route>
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
